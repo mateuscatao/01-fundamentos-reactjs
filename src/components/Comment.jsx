@@ -11,7 +11,9 @@ export function Comment({ content, onDeteleComment }) {
   }
 
   function handleLikedComment() {
-    setLikeCount(likeCount + 1);
+    setLikeCount((state) => {
+      return state + 1
+    });
   }
 
   return (
